@@ -3,7 +3,7 @@
 shopt -s nocasematch
 
 # Define the JIRA ticket pattern
-JIRA_TICKET_PATTERN="(FRBI|CRI|IR|MREG|MVKPLTFRM|MVKENG|MAVRCK|RF|REV|CIAM)-[0-9]{1,7}"
+JIRA_TICKET_PATTERN="(FRBI|CRI|IR|MREG|MVKPLTFRM|MVKENG|MAVRCK|RF|REV|CIAM)-[0-9]+"
 
 # Get the PR number and repo information from the environment variables
 PR_NUMBER=${PR_NUMBER}
