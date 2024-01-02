@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM ubuntu:latest
-RUN apt-get update && apt-get install -y jq curl
+RUN apt-get update && apt-get install -y python3
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+COPY jira-ticket-checker.py /jira-ticket-checker.py
+RUN chmod +x /jira-ticket-checker.py
+ENTRYPOINT ["python", "jira-ticket-checker.py"]
