@@ -33,7 +33,7 @@ jira_headers = {
 }
 
 pr_data_response = requests.get(url=github_full_url, headers=pr_headers)
-pr_title_check = (re.search(r'(FRBI|CRI|IR|MREG|MVKPLTFRM|MVKENG|MAVRCK|RF|REV|CIAM)-[0-9]+', pr_data_response.title))
+pr_title_check = (re.search(r'[A-Z]{2,}-[0-9]+', pr_data_response.title))
 
 if pr_title_check is None:
     print("No JIRA Ticket match found.")
