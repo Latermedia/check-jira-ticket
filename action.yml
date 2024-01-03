@@ -16,5 +16,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: $GITHUB_ACTION_PATH/jira-ticket-checker.py
+    - run: ${{ github.action_path }}/jira-ticket-checker.py
       shell: python
