@@ -2,6 +2,6 @@
 FROM python:3.12
 RUN pip3 install requests --upgrade
 
-RUN mkdir -p /github/workspace
-COPY jira-ticket-checker.py /github/workspace/jira-ticket-checker.py
-CMD ["python", "jira-ticket-checker.py"]
+COPY jira-ticket-checker.py /jira-ticket-checker.py
+RUN chmod +x /jira-ticket-checker.py
+CMD ["jira-ticket-checker.py"]
