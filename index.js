@@ -35,7 +35,9 @@ axios.get(githubFullUrl, { headers: prHeaders })
       console.log('No JIRA Ticket match found.');
       process.exit(1);
     } else if (prTitleCheck.length > 1) {
-      console.log(`More than one JIRA Ticket was found in PR title: ${prTitleCheck}`);
+      console.log('More than one JIRA Ticket was found in PR title: ');
+      for (i = 0; i < prTitleCheck.length; i++)
+         document.writeln(prTitleCheck[i]);
       process.exit(1);
     } else if (prTitleCheck.length === 1) {
       console.log(`JIRA Ticket was found in PR title: ${prTitleCheck[0]}`);
