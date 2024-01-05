@@ -29,7 +29,7 @@ const jiraHeaders = {
 
 axios.get(githubFullUrl, { headers: prHeaders })
   .then((prDataResponse) => {
-    const prTitleCheck = prDataResponse.data.title.match(/([A-Z]{2,}-[0-9]+)/);
+    const prTitleCheck = prDataResponse.data.title.match(/([A-Z]{2,}-[0-9]+)/gm);
 
     if (!prTitleCheck) {
       console.log('No JIRA Ticket match found.');
