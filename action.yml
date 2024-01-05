@@ -13,7 +13,6 @@ inputs:
   githubToken:
     description: 'Github Token'
     required: true
-
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'node20'
+  main: 'index.js'
