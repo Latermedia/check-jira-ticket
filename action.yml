@@ -15,4 +15,4 @@ inputs:
     required: true
 runs:
   using: 'node20'
-  main: 'jira-checker.js'
+  main: 'index.js'
