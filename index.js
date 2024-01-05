@@ -57,5 +57,6 @@ axios.get(githubFullUrl, { headers: prHeaders })
   })
   .catch((error) => {
     console.error('Error:', error.message);
+    console.log(`The title does not contain a valid JIRA ticket: ${jiraIssue}`);
     process.exit(1);
   });
