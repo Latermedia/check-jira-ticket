@@ -2,9 +2,9 @@
   "name": "github-jira-check",
   "version": "1.0.0",
   "description": "A script to check GitHub PR titles for valid JIRA tickets",
-  "main": "convertScript.js", // Replace with the actual filename if different
+  "main": "index.js",
   "scripts": {
-    "start": "node convertScript.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "axios": "^0.24.0",
