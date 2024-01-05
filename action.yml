@@ -14,5 +14,5 @@ inputs:
     description: 'Github Token'
     required: true
 runs:
-  using: node20
-  main: src/index.js
+  using: 'node20'
+  main: 'jira-checker.js'

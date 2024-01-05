@@ -4,7 +4,7 @@
   "description": "A script to check GitHub PR titles for valid JIRA tickets",
   "main": "index.js",
   "scripts": {
-    "start": "npm ci && node src/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.24.0",
