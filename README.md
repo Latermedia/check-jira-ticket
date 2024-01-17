@@ -15,3 +15,12 @@ check-jira-ticket:
          jiraServer: ${{ env.JIRA_SERVER }}
          githubToken: ${{ env.GH_API_TOKEN }}
 ```
+
+## What is Checked
+The title of a Pull Request is checked for the following:
+* There is a ticket in the title
+* There is not more than one ticket in the title
+* The ticket found in the title is a valid Jira ticket 
+
+## REGEX
+`/([A-Z]{2,}-[0-9]+)/gm`
