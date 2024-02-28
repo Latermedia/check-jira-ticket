@@ -32,7 +32,7 @@ axios.get(githubFullUrl, { headers: prHeaders })
     const prTitleCheck = prDataResponse.data.title.match(/([A-Z]{2,}-[0-9]+)/gm);
 
     if (!prTitleCheck) {
-      console.log('No JIRA Ticket match found.');
+      console.log('No JIRA ticket found, please verify the issue ID is included in the pull request title. For more info, review the check-jira-ticket git repo.');
       process.exit(1);
     } else if (prTitleCheck.length > 1) {
       console.log('More than one JIRA Ticket was found in PR title: ');
