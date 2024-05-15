@@ -44,19 +44,19 @@ axios.get(githubFullUrl, { headers: prHeaders })
       jiraIssue = prTitleCheck[0];
     }
 
-    const jiraFullUrl = `${jiraBaseUrl}${jiraApiUrl}${jiraIssue}`;
+    jiraIssueUpper = jiraIssue.toUpperCase();
+    const jiraFullUrl = `${jiraBaseUrl}${jiraApiUrl}${jiraIssueUpper}`;
     return axios.get(jiraFullUrl, { headers: jiraHeaders });
   })
   .then((jiraIssueResponse) => {
-    if (jiraIssueResponse.data.key === jiraIssue) {
-      console.log(`The title contains a valid JIRA ticket: ${jiraIssue}`);
+    if (jiraIssueResponse.data.key === jiraIssueUpper) {
+      console.log(`The title contains a valid JIRA ticket: ${jiraIssueUpper}`);
     } else {
-      console.log(`The title does not contain a valid JIRA ticket: ${jiraIssue}`);
+      console.log(`The title does not contain a valid JIRA ticket: ${jiraIssueUpper}`);
       process.exit(1);
     }
   })
   .catch((error) => {
     console.error('Error:', error.message);
-    console.log(`The title does not contain a valid JIRA ticket: ${jiraIssue}`);
+    console.log(`The title does not contain a valid JIRA ticket: ${jiraIssueUpper}`);
     process.exit(1);
-  });
